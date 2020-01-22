@@ -25,7 +25,7 @@ objects:
       dockerStrategy:
         from:
           kind: ImageStreamTag
-          name: eclipse-mosquitto:1.4.12
+          name: eclipse-mosquitto:latest
       type: Docker
     triggers:
     - github:
@@ -46,10 +46,10 @@ objects:
   spec:
     tags:
     - annotations:
-        openshift.io/imported-from: eclipse-mosquitto:1.4.12
+        openshift.io/imported-from: eclipse-mosquitto:latest
       from:
         kind: DockerImage
-        name: eclipse-mosquitto:1.4.12
+        name: eclipse-mosquitto:latest
       generation: 2
       importPolicy: {}
       name: 1.4.12
@@ -265,7 +265,7 @@ parameters:
   - name: SOURCE_REPOSITORY_URL
     displayName: Source Repository URL
     description: The URL of the repository with your application source code
-    value: https://github.com/tobru/mosquitto-openshift.git
+    value: https://github.com/schabrolles/mosquitto-openshift.git
     required: true
   - name: GITHUB_WEBHOOK_SECRET
     description: A secret string used to configure the GitHub webhook
