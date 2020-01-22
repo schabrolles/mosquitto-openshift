@@ -1,5 +1,4 @@
-FROM eclipse-mosquitto:1.4.12
-MAINTAINER Tobias Brunner <tobias@tobru.ch>
+FROM eclipse-mosquitto:latest
 
 ADD fix-permissions.sh /usr/local/bin
 RUN chown -R mosquitto:root /mosquitto && \
