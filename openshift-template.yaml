@@ -52,7 +52,7 @@ objects:
         name: eclipse-mosquitto:latest
       generation: 2
       importPolicy: {}
-      name: 1.4.12
+      name: latest
 - apiVersion: v1
   kind: ImageStream
   metadata:
